@@ -3,7 +3,7 @@ import time
 import os
 import sys
 
-
+#Get a list of the processes and check for the required process
 def checkProcesses(processName):
 
     for proc in psutil.process_iter():
@@ -17,6 +17,7 @@ def checkProcesses(processName):
 
 time_interval = 1
 
+#infinite loop to send out messages at the defined time-intervals
 while(1):
     if (checkProcesses('chrome.exe')):
         time.sleep(5)
